@@ -13,7 +13,4 @@ if ! command -v git &> /dev/null; then
     brew install git
 fi
 
-echo "Cloning repo..."
 git clone https://github.com/Nilsix/Bleach-Rebirth-of-Souls-Community-Patch.git
-
-read -p "Press Enter to exit..."

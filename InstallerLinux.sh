@@ -11,6 +11,3 @@ sudo apt install -y git
 
 echo "Cloning repo..."
 git clone https://github.com/Nilsix/Bleach-Rebirth-of-Souls-Community-Patch.git
-
-echo "Done."
-read -p "Press enter to exit..."
