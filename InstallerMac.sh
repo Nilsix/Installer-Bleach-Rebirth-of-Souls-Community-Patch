@@ -1,16 +1,12 @@
 #!/bin/bash
 
-echo "Installing dependencies..."
+echo "Installing Python 3.11, Git and pygame..."
 
+brew install python@3.11 git
 
-if ! command -v python3 &> /dev/null; then
-    echo "Python not found, installing via Homebrew..."
-    brew install python
-fi
-
-if ! command -v git &> /dev/null; then
-    echo "Installing Git..."
-    brew install git
-fi
+python3.11 -m pip install --upgrade pip
+python3.11 -m pip install pygame
 
 git clone https://github.com/Nilsix/Bleach-Rebirth-of-Souls-Community-Patch.git
+
+echo "Done."

@@ -1,13 +1,12 @@
 #!/bin/bash
 
-echo "Updating packages..."
+echo "Installing Python 3.11, Git and dependencies..."
+
 sudo apt update
 
-echo "Installing Python..."
-sudo apt install -y python3 python3-pip
+sudo apt install -y python3.11 python3.11-venv python3-pip git
 
-echo "Installing Git..."
-sudo apt install -y git
+python3.11 -m pip install --upgrade pip
+python3.11 -m pip install pygame
 
-echo "Cloning repo..."
 git clone https://github.com/Nilsix/Bleach-Rebirth-of-Souls-Community-Patch.git
