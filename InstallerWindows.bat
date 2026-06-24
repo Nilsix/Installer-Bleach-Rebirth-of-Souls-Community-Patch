@@ -1,5 +1,5 @@
 @echo off 
-echo After the installation is done, the window will close itself, DO NOT close it yourself or else this would break the launcher
+echo After the installation is done, the window will close itself, DO NOT close it yourself or else this would break the launcher, please don't forget to make a backup folder of your Bleach Rebirth of Souls folder, in case things go wrong (this will also allow you to use the repair function in the launcher)
 pause
 
 winget uninstall Python.Python.3.14
