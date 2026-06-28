@@ -1,12 +1,18 @@
 #!/bin/bash
+echo "After the installation is done, the window will close itself, DO NOT close it yourself or else this would break the launcher, please don't forget to make a backup folder of your Bleach Rebirth of Souls folder"
+read -p "Press Enter to continue..."
 
-echo "Installing Python 3.11, Git and pygame..."
+# Install Homebrew if not present
+if ! command -v brew &>/dev/null; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 brew install python@3.11 git
 
-python3.11 -m pip install --upgrade pip
-python3.11 -m pip install pygame
+pip3 install pygame
+
+if [ -d "Bleach-Rebirth-of-Souls-Community-Patch" ]; then
+    rm -rf Bleach-Rebirth-of-Souls-Community-Patch
+fi
 
 git clone https://github.com/Nilsix/Bleach-Rebirth-of-Souls-Community-Patch.git
-
-echo "Done."

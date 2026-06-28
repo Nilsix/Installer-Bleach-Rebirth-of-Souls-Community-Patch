@@ -14,7 +14,6 @@ py -3.11 -m pip install pygame
 if exist Bleach-Rebirth-of-Souls-Community-Patch (
 	rmdir /s /q Bleach-Rebirth-of-Souls-Community-Patch
 )
-
 git clone https://github.com/Nilsix/Bleach-Rebirth-of-Souls-Community-Patch.git
 
 

@@ -1,12 +1,14 @@
 #!/bin/bash
+echo "After the installation is done, the window will close itself, DO NOT close it yourself or else this would break the launcher, please don't forget to make a backup folder of your Bleach Rebirth of Souls folder"
+read -p "Press Enter to continue..."
 
-echo "Installing Python 3.11, Git and dependencies..."
+sudo apt-get update
+sudo apt-get install -y python3.11 python3-pip git
 
-sudo apt update
+pip3 install pygame
 
-sudo apt install -y python3.11 python3.11-venv python3-pip git
-
-python3.11 -m pip install --upgrade pip
-python3.11 -m pip install pygame
+if [ -d "Bleach-Rebirth-of-Souls-Community-Patch" ]; then
+    rm -rf Bleach-Rebirth-of-Souls-Community-Patch
+fi
 
 git clone https://github.com/Nilsix/Bleach-Rebirth-of-Souls-Community-Patch.git
